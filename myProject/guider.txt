@@ -1,0 +1,5 @@
+How to activate environment & run server
+(use cmd or powershell)
+1. ./venv/script/activate
+2. python manage.py runserver
+3. click link
