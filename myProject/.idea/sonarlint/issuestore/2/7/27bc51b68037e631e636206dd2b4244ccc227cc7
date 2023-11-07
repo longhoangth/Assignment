@@ -1,0 +1,16 @@
+
+python:S1192„"jDefine a constant instead of duplicating this literal 'You are not allowed to do this operation!' 3 times.(úØ“ùÿÿÿÿ8¡Íß½º1
+npython:S1542"ORename function "loginPage" to match the regular expression ^[a-z_][a-z0-9_]*$.(˜øğµ8¢Íß½º1
+[python:S5754"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8¢Íß½º1
+vpython:S1542("RRename function "registerUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(¸ì³Çÿÿÿÿÿ8¢Íß½º1
+tpython:S15429"PRename function "logoutUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(İ´™Óşÿÿÿÿ8£Íß½º1
+Opython:S1481R"+Remove the unused local variable "message".(™™æåøÿÿÿÿ8£Íß½º1
+upython:S1542_"QRename function "userProfile" to match the regular expression ^[a-z_][a-z0-9_]*$.(éùÍ¾ıÿÿÿÿ8£Íß½º1
+npython:S1542j"PRename function "createRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(şÊ²48¤Íß½º1
+Ppython:S1481o"1Replace unused local variable "created" with "_".(à×¸ö8¤Íß½º1
+ppython:S1542€"PRename function "updateRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(…âåë8¥Íß½º1
+Opython:S1481‡"/Replace unused local variable "topic" with "_".(à×¸ö8¥Íß½º1
+Qpython:S1481‡"1Replace unused local variable "created" with "_".(à×¸ö8¥Íß½º1
+ppython:S1542”"PRename function "deleteRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(÷Ùõ8¦Íß½º1
+xpython:S1542 "SRename function "deleteMessage" to match the regular expression ^[a-z_][a-z0-9_]*$.(×Î•Ÿıÿÿÿÿ8§Íß½º1
+upython:S1542¬"PRename function "updateUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(³üô¹şÿÿÿÿ8¨Íß½º1
