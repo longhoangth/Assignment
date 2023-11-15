@@ -12,10 +12,8 @@ from django.contrib.auth import authenticate, login, logout
 # Create your views here.
 def loginPage(request):
 	page = 'login'
-
 	if request.user.is_authenticated:
 		return redirect('home')
-
 	if request.method == 'POST':
 		username = request.POST.get('username').lower()
 		password = request.POST.get('password')
@@ -31,14 +29,13 @@ def loginPage(request):
 			return redirect('home')
 		else:
 			messages.error(request, 'Please fill the correct username and password')
-
 	context = {'page': page}
-
 	return render(request, 'studybud/login_register.html', context)
 
 
 def registerUser(request):
 	form = MyUserCreationForm()
+
 	if request.method == 'POST':
 		form = MyUserCreationForm(request.POST)
 		if form.is_valid():
@@ -48,9 +45,8 @@ def registerUser(request):
 			login(request, user)
 			return redirect('home')
 		else:
-			messages.error(request, 'An error occurred during registration!')
+			messages.error(request, 'An error occurred during registration')
 	context = {'form': form}
-
 	return render(request, 'studybud/login_register.html', context)
 
 
@@ -70,7 +66,6 @@ def home(request):
 	room_count = rooms.count()
 	room_messages = Message.objects.all().order_by('-created')
 	context = {'rooms': rooms, 'topics': topic, 'room_count': room_count, 'room_messages': room_messages}
-
 	return render(request, 'studybud/home.html', context)
 
 
@@ -86,9 +81,7 @@ def room(request, pk):
 		)
 		room.participants.add(request.user)
 		return redirect('room', pk=room.id)
-
 	context = {'room': room, 'room_messages': room_messages, 'participants': participants}
-
 	return render(request, 'studybud/room.html', context)
 
 
@@ -98,7 +91,6 @@ def userProfile(request, pk):
 	room_messages = user.message_set.all().order_by('created')
 	topics = Topic.objects.all()
 	context = {'user': user, 'rooms': rooms, 'topics': topics, 'room_messages': room_messages}
-
 	return render(request, 'studybud/profile.html', context)
 
 
@@ -108,19 +100,15 @@ def createRoom(request):
 	topics = Topic.objects.all()
 	if request.method == 'POST':
 		topic_name = request.POST.get('topic')
-		topic, created = Topic.object.get_or_create(name=topic_name)
-
+		topic, created = Topic.objects.get_or_create(name=topic_name)
 		Room.objects.create(
 			host=request.user,
 			topic=topic,
 			name=request.POST.get('name'),
 			description=request.POST.get('description')
 		)
-
 		return redirect('home')
-
 	context = {'form': form, 'topics': topics}
-
 	return render(request, 'studybud/room_form.html', context)
 
 
@@ -128,19 +116,18 @@ def createRoom(request):
 def updateRoom(request, pk):
 	room = Room.objects.get(pk=pk)
 	form = RoomForm(instance=room)
+	topics = Topic.objects.all()
 	if request.user != room.host:
 		return HttpResponse('You are not allowed to do this operation!')
 	if request.method == 'POST':
 		topic_name = request.POST.get('topic')
-		topic, created = Topic.object.get_or_create(name=topic_name)
+		topic, created = Topic.objects.get_or_create(name=topic_name)
 		room.name = request.POST.get('name')
-		room.topic = request.POST.get('topic')
+		room.topic = topic
 		room.description = request.POST.get('description')
 		room.save()
 		return redirect('home')
-
-	context = {'form': form}
-
+	context = {'form': form, 'topics': topics, 'room': room}
 	return render(request, 'studybud/room_form.html', context)
 
 
@@ -152,7 +139,6 @@ def deleteRoom(request, pk):
 	if request.method == 'POST':
 		room.delete()
 		return redirect('home')
-
 	return render(request, 'studybud/delete.html', {'obj': room})
 
 
@@ -164,7 +150,6 @@ def deleteMessage(request, pk):
 	if request.method == 'POST':
 		messages.delete()
 		return redirect('home')
-
 	return render(request, 'studybud/delete.html', {'obj': messages})
 
 
@@ -177,7 +162,5 @@ def updateUser(request):
 		if form.is_valid():
 			form.save()
 			return redirect('user-profile', pk=user.id)
-
 	context = {'form': form}
-
 	return render(request, 'studybud/update_user.html', context)

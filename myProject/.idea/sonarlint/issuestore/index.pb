@@ -69,3 +69,5 @@ H
 static/images/avatar.svg,9\6\965256e758e7ae1b138a7219ff9b8aea7d28f5a3
 C
 theme/activity.html,c\e\cef631d5ce22693b916cd3e975b6c394fd2b2944
+U
+%studybud/templates/studybud/home.html,a\c\acdf3a591314bd271e2feec11c87d155e2c3c9b0
