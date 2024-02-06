@@ -71,3 +71,7 @@ C
 theme/activity.html,c\e\cef631d5ce22693b916cd3e975b6c394fd2b2944
 U
 %studybud/templates/studybud/home.html,a\c\acdf3a591314bd271e2feec11c87d155e2c3c9b0
+@
+requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

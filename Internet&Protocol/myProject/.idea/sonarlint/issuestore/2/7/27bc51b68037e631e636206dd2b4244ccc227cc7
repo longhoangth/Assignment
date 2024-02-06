@@ -1,15 +1,6 @@
 
-Žpython:S1192y"jDefine a constant instead of duplicating this literal 'You are not allowed to do this operation!' 3 times.(úØž“ùÿÿÿÿ8¡Íß½º1
-npython:S1542"ORename function "loginPage" to match the regular expression ^[a-z_][a-z0-9_]*$.(˜øðµ8¢Íß½º1
-[python:S5754"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8¢Íß½º1
-vpython:S1542$"RRename function "registerUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(¸ì³Çÿÿÿÿÿ8¢Íß½º1
-tpython:S15425"PRename function "logoutUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ý´™Óþÿÿÿÿ8£Íß½º1
-Opython:S1481M"+Remove the unused local variable "message".(™™æåøÿÿÿÿ8£Íß½º1
-upython:S1542X"QRename function "userProfile" to match the regular expression ^[a-z_][a-z0-9_]*$.(éùÍ¾ýÿÿÿÿ8£Íß½º1
-npython:S1542b"PRename function "createRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(þÊ²48¤Íß½º1
-Opython:S1481g"1Replace unused local variable "created" with "_".(‚»Õ78¤Íß½º1
-opython:S1542t"PRename function "updateRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(…âåë8¥Íß½º1
-Opython:S1481|"1Replace unused local variable "created" with "_".(‚»Õ78§Õ…‘½1
-ppython:S1542‡"PRename function "deleteRoom" to match the regular expression ^[a-z_][a-z0-9_]*$.(÷Ùõž8¦Íß½º1
-xpython:S1542’"SRename function "deleteMessage" to match the regular expression ^[a-z_][a-z0-9_]*$.(×Î•Ÿýÿÿÿÿ8§Íß½º1
-upython:S1542"PRename function "updateUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(³üô¹þÿÿÿÿ8¨Íß½º1
+Žpython:S1192x"jDefine a constant instead of duplicating this literal 'You are not allowed to do this operation!' 3 times.(úØž“ùÿÿÿÿ8¡Íß½º1
+[python:S5754"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8¢Íß½º1
+Opython:S1481L"+Remove the unused local variable "message".(™™æåøÿÿÿÿ8£Íß½º1
+Opython:S1481f"1Replace unused local variable "created" with "_".(‚»Õ78¤Íß½º1
+Opython:S1481{"1Replace unused local variable "created" with "_".(‚»Õ78§Õ…‘½1

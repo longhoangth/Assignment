@@ -4,13 +4,12 @@ from .models import Room, Topic, User, Message
 from .form import RoomForm, UserForm, MyUserCreationForm
 from django.http import HttpResponse
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
 # Create your views here.
-def loginPage(request):
+def login_page(request):
 	page = 'login'
 	if request.user.is_authenticated:
 		return redirect('home')
@@ -33,7 +32,7 @@ def loginPage(request):
 	return render(request, 'studybud/login_register.html', context)
 
 
-def registerUser(request):
+def register_user(request):
 	form = MyUserCreationForm()
 
 	if request.method == 'POST':
@@ -50,7 +49,7 @@ def registerUser(request):
 	return render(request, 'studybud/login_register.html', context)
 
 
-def logoutUser(request):
+def logout_user(request):
 	logout(request)
 	return redirect('home')
 
@@ -85,7 +84,7 @@ def room(request, pk):
 	return render(request, 'studybud/room.html', context)
 
 
-def userProfile(request, pk):
+def user_profile(request, pk):
 	user = User.objects.get(id=pk)
 	rooms = user.room_set.all()
 	room_messages = user.message_set.all().order_by('created')
@@ -95,7 +94,7 @@ def userProfile(request, pk):
 
 
 @login_required(login_url='login')
-def createRoom(request):
+def create_room(request):
 	form = RoomForm()
 	topics = Topic.objects.all()
 	if request.method == 'POST':
@@ -113,7 +112,7 @@ def createRoom(request):
 
 
 @login_required(login_url='login')
-def updateRoom(request, pk):
+def update_room(request, pk):
 	room = Room.objects.get(pk=pk)
 	form = RoomForm(instance=room)
 	topics = Topic.objects.all()
@@ -132,7 +131,7 @@ def updateRoom(request, pk):
 
 
 @login_required(login_url='login')
-def deleteRoom(request, pk):
+def delete_room(request, pk):
 	room = Room.objects.get(pk=pk)
 	if request.user != room.host:
 		return HttpResponse('You are not allowed to do this operation!')
@@ -143,7 +142,7 @@ def deleteRoom(request, pk):
 
 
 @login_required(login_url='login')
-def deleteMessage(request, pk):
+def delete_message(request, pk):
 	messages = Message.objects.get(id=pk)
 	if request.user != messages.user:
 		return HttpResponse('You are not allowed to do this operation!')
@@ -154,7 +153,7 @@ def deleteMessage(request, pk):
 
 
 @login_required(login_url='login')
-def updateUser(request):
+def update_user(request):
 	user = request.user
 	form = UserForm(instance=user)
 	if request.method == 'POST':
