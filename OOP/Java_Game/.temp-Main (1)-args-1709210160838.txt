@@ -1,0 +1,12 @@
+--module-path
+"C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib"
+--add-modules
+javafx.controls,javafx.fxml
+-Dfile.encoding=UTF-8
+-Dstdout.encoding=UTF-8
+-Dstderr.encoding=UTF-8
+-p
+"C:\\Users\\84396\\Desktop\\JAVA\\GAME\\mimi\\bin;C:\\Users\\84396\\.p2\\pool\\plugins\\org.eclipse.fx.ide.css.jfx8_3.8.0.202204150904.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.base.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.controls.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.fxml.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.graphics.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.media.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.swing.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx.web.jar;C:\\Program Files\\Java\\javafx-sdk-21.0.2\\lib\\javafx-swt.jar"
+-XX:+ShowCodeDetailsInExceptionMessages
+-m
+application/application.Main
